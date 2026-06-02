@@ -21,3 +21,13 @@ npm i
 npm run dev
 ```
 
+## 3) Entrar a la carpeta `plugin`, instalar dependencias y ejecutar
+
+Copia y pega estos comandos en la terminal desde la carpeta donde clonaste el repo:
+
+```bash
+cd ./project
+npm i
+npm run dev
+```
+
