@@ -26,8 +26,8 @@ npm run dev
 Copia y pega estos comandos en la terminal desde la carpeta donde clonaste el repo:
 
 ```bash
-cd ./project
+cd ./plugin
 npm i
-npm run dev
+npm run build
 ```
 
