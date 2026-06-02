@@ -1,0 +1,74 @@
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  overflow-y: auto;
+  border-right: 1px solid #333;
+  z-index: 1000;
+}
+
+.nav-header {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  background-color: #0d47a1;
+}
+
+.nav-header h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.nav-link {
+  padding: 12px 20px;
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-link:hover {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-left-color: #0d47a1;
+}
+
+.nav-link.active {
+  background-color: #0d47a1;
+  color: #ffffff;
+  border-left-color: #64b5f6;
+  font-weight: 500;
+}
+
+/* Scrollbar styling */
+.navigation::-webkit-scrollbar {
+  width: 8px;
+}
+
+.navigation::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.navigation::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.navigation::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,64 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.app-content {
+  margin-left: 250px;
+  flex: 1;
+  overflow-y: auto;
+  width: calc(100% - 250px);
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    
+    width: 200px;
+  }
+
+  .app-content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    border-right: none;
+    border-top: 1px solid #333;
+  }
+
+  .nav-header {
+    display: none;
+    padding: 10px;
+    border-right: 1px solid #333;
+    border-bottom: none;
+  }
+
+  .nav-header h1 {
+    font-size: 14px;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  .nav-link {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .app-content {
+    margin-left: 0;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+}
