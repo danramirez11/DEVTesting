@@ -1,0 +1,427 @@
+.workspace-page {
+  min-height: 100vh;
+  background: #f7f7f8;
+  color: #262626;
+  padding: 0;
+}
+
+.workspace-shell {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  min-height: 100vh;
+  border: 3px solid #1d7feb;
+  background: #f2f2f3;
+  display: flex;
+}
+
+.left-menu {
+  width: 280px;
+  border-right: 1px solid #dddddd;
+  padding: 20px 16px;
+  background: #ececed;
+}
+
+.company-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.company-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 4px solid #2e81eb;
+}
+
+.menu-list,
+.menu-sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 16px;
+  color: #1f1f1f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu-item:hover {
+  background: #e6eefb;
+  color: #1668d9;
+}
+
+.menu-item:hover .item-icon,
+.menu-item:hover .caret {
+  color: #1668d9;
+}
+
+.menu-item .item-icon {
+  width: 14px;
+  color: #3f3f3f;
+  font-size: 10px;
+  text-align: center;
+}
+
+.menu-item.active {
+  color: #1668d9;
+  background: #dceaff;
+}
+
+.menu-item.active:hover {
+  background: #dceaff;
+}
+
+.menu-item.expanded {
+  margin-top: 4px;
+}
+
+.menu-item .caret {
+  margin-left: auto;
+  font-size: 12px;
+  color: #6b6b6b;
+  transform: rotate(-90deg);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu-item .caret.open {
+  transform: rotate(0deg);
+}
+
+.menu-sublist {
+  margin-left: 24px;
+  margin-bottom: 6px;
+  background: #e5e5e7;
+  overflow: hidden;
+  max-height: 220px;
+  opacity: 1;
+  transition: max-height 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-sublist.closed {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+}
+
+.docs-toggle {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+.docs-toggle:focus-visible {
+  outline: 2px solid #2b79e8;
+  outline-offset: 1px;
+}
+
+.menu-item.nested {
+  border-radius: 0;
+  margin: 0;
+  padding: 12px 10px;
+  font-size: 15px;
+}
+
+.workspace-content {
+  position: relative;
+  flex: 1;
+  padding: 44px 340px 28px 34px;
+}
+
+.workspace-header-row {
+  max-width: 640px;
+}
+
+.workspace-title {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1.1;
+}
+
+.workspace-subtitle {
+  margin: 14px 0 18px;
+  max-width: 520px;
+  color: #454545;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.workspace-inputs {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.text-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.text-input-field span {
+  color: #252525;
+}
+
+.text-input-field input {
+  height: 46px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 16px;
+  background: #f9f9f9;
+}
+
+.text-input-field input::placeholder {
+  color: #b6b6b6;
+}
+
+.steps-panel {
+  position: absolute;
+  right: 34px;
+  top: 44px;
+  width: 280px;
+  padding-top: 2px;
+}
+
+.step-item {
+  display: flex;
+  gap: 12px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.step-marker-wrap {
+  width: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.step-marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  background: #e6e6e8;
+  color: #7f7f7f;
+}
+
+.step-line {
+  width: 1px;
+  height: 40px;
+  margin-top: 5px;
+  background: #c9dffe;
+}
+
+.step-text p {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.step-text small {
+  color: #666666;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.step-item.complete .step-marker {
+  color: #2174e5;
+  background: #deebfd;
+}
+
+.step-item.complete .step-text,
+.step-item.pending .step-text {
+  opacity: 0.44;
+}
+
+.step-item.active .step-marker {
+  background: #2b79e8;
+  color: #ffffff;
+}
+
+.workspace-upload-section {
+  max-width: 640px;
+  margin-top: 24px;
+}
+
+.workspace-upload-section h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.workspace-upload-section > p {
+  color: #4a4a4a;
+  margin: 8px 0 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.file-input-hidden {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.file-dropzone {
+  width: 100%;
+  min-height: 168px;
+  border: 1px dashed #cfcfcf;
+  border-radius: 8px;
+  background: #f5f5f6;
+  color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.file-dropzone.dragging {
+  border-color: #2b79e8;
+  background: #eef4ff;
+}
+
+.dropzone-icon {
+  color: #2b79e8;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.file-dropzone p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.file-dropzone small {
+  color: #8a8a8a;
+  font-size: 14px;
+}
+
+.selected-files-label {
+  margin: 8px 0 12px;
+  color: #6d6d6d;
+  font-size: 13px;
+}
+
+.workspace-checkbox-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.workspace-checkbox-row input {
+  width: 14px;
+  height: 14px;
+  accent-color: #2b79e8;
+}
+
+.workspace-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.workspace-actions button {
+  border-radius: 8px;
+  height: 38px;
+  min-width: 170px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ghost-btn {
+  border: 1px solid #d2d2d2;
+  background: #f6f6f6;
+  color: #2c2c2c;
+}
+
+.primary-btn {
+  border: none;
+  background: #2b79e8;
+  color: #ffffff;
+}
+
+.primary-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+  .workspace-shell {
+    border-width: 2px;
+  }
+
+  .workspace-title {
+    font-size: 42px;
+  }
+
+  .workspace-subtitle {
+    font-size: 18px;
+  }
+
+  .step-text p {
+    font-size: 22px;
+  }
+
+  .step-text small {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 980px) {
+  .workspace-shell {
+    flex-direction: column;
+    border: none;
+  }
+
+  .left-menu {
+    width: auto;
+    border-right: none;
+    border-bottom: 1px solid #d5d5d5;
+  }
+
+  .workspace-content {
+    padding: 20px;
+  }
+
+  .workspace-header-row {
+    max-width: none;
+  }
+
+  .steps-panel {
+    position: static;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .workspace-title {
+    font-size: 34px;
+  }
+}

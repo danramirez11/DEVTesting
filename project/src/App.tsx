@@ -1,6 +1,5 @@
 ﻿import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import ComponentsShowcase from "./components/ComponentsShowcase";
+import Form from "./screens/form";
 import "./styles/Layout.css";
 
 function App() {
@@ -10,12 +9,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="app-layout">
-              <Navigation />
-              <div className="app-content">
-                <ComponentsShowcase />
-              </div>
-            </div>
+            <Form/>
           }
         />
       </Routes>
